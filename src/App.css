@@ -1,0 +1,240 @@
+.containerr {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+
+  overflow: hidden; /* Prevent scrolling issues */
+}
+
+.logo {
+  font-size: 20px; /* Slightly larger for better visibility */
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.sidebar {
+  background-color: #252b3b; /* Unique dark blue-gray for sidebar */
+  color: white;
+  height: 100vh;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3); /* Sidebar shadow for depth */
+  transition: width 0.3s ease; /* Smooth sidebar resizing */
+  overflow: hidden; /* Prevent text overflow when closed */
+}
+
+.top_section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.bars {
+  font-size: 24px;
+  cursor: pointer;
+  color: #4f8a8b; /* Unique teal for toggle icon */
+  transition: color 0.3s ease-in-out;
+}
+
+.bars:hover {
+  color: #74c2c3; /* Brighter teal on hover */
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; /* Slightly larger icons */
+  height: 32px;
+  border-radius: 50%; /* Circular icons */
+  color: #4f8a8b; /* Teal for icon */
+  background-color: rgba(79, 138, 139, 0.1); /* Light teal background */
+  box-shadow: 0 4px 8px rgba(79, 138, 139, 0.2); /* Soft shadow for icons */
+  transition: transform 0.2s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  background-color: #4f8a8b; /* Teal on hover */
+  color: white; /* White icon on hover */
+  box-shadow: 0 6px 12px rgba(79, 138, 139, 0.4); /* Stronger shadow on hover */
+}
+
+.link {
+  height: 50px; /* Slightly larger for better touch interaction */
+  display: flex;
+  width: 240px;
+  align-items: center;
+  padding: 12px 8px;
+  color: white;
+  text-decoration: none;
+  gap: 14px; /* Adequate spacing between icon and text */
+  border-radius: 12px;
+  /* Smoothly rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.link:hover {
+  width: 240px;
+  border: none !important;
+  background-color: rgba(79, 138, 139, 0.2); /* Subtle teal hover background */
+  /* transform: translateX(10px);  */
+  color: #74c2c3; /* Brighter teal on hover */
+  box-shadow: 0 3px 8px rgba(79, 138, 139, 0.4); /* Subtle shadow on hover */
+}
+
+.link.active {
+  color: white;
+  border: none !important;
+  width: 240px;
+  /* Stronger shadow for active link */
+  transform: translateX(2px); /* Slight shift for emphasis */
+  border-radius: 0px 20px 20px 0px; /* Rounded corners for smooth edges */
+  padding: 12px 8px; /* Padding for better spacing */
+}
+
+.main {
+  padding: 20px; /* Add spacing inside the main content */
+  transition: margin-left 0.3s ease; /* Smooth content shifting */
+  background-color: #f7f9fc; /* Soft light blue for the main content */
+  border-radius: 10px; /* Smooth rounding */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for the main content */
+}
+
+/* Text for Links */
+.link_text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Scrollbar Customization */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #4f8a8b;
+  border-radius: 5px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background-color: #252b3b;
+}
+/* Base Icon Styles */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 18px; /* Adjust font size for consistent appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Unique Colors for Each Icon */
+.icon-dashboard {
+  color: #ff865e; /* Coral-orange */
+  background-color: rgba(255, 134, 94, 0.1);
+}
+.icon-about {
+  color: #4caf50; /* Green */
+  background-color: rgba(76, 175, 80, 0.1);
+}
+.icon-analytics {
+  color: #2196f3; /* Blue */
+  background-color: rgba(33, 150, 243, 0.1);
+}
+.icon-comment {
+  color: #ffc107; /* Amber */
+  background-color: rgba(255, 193, 7, 0.1);
+}
+.icon-product {
+  color: #e91e63; /* Pink */
+  background-color: rgba(233, 30, 99, 0.1);
+}
+.icon-productlist {
+  color: #9c27b0; /* Purple */
+  background-color: rgba(156, 39, 176, 0.1);
+}
+.icon:hover {
+  background-color: #fff; /* Light background */
+  color: #252b3b; /* Darker color for better contrast */
+  transform: scale(1.2); /* Slightly larger on hover */
+}
+/* Dropdown Section */
+.dropdown {
+  position: relative; /* Position relative for dropdown positioning */
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #252b3b; /* Same color as sidebar */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px; /* Smooth corners */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown-item {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(79, 138, 139, 0.2); /* Teal hover background */
+  color: #74c2c3; /* Brighter teal text on hover */
+  transform: translateX(
+    10px
+  ); /* Optional: slight translation for hover effect */
+}
+
+/* Adjustments for Icon Styles in Dropdown */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px; /* Adjust size for dropdown */
+  height: 24px;
+  border-radius: 50%;
+  color: #4f8a8b;
+  background-color: rgba(79, 138, 139, 0.1);
+  box-shadow: 0 4px 8px rgba(79, 138, 139, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.icon:hover {
+  background-color: #4f8a8b;
+  color: white;
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+.dropdown_header {
+  cursor: pointer;
+  display: flex;
+  padding-left: 8px;
+  padding-top: 10px;
+  gap: 8px;
+  align-items: center;
+}
+.dropdown_item {
+  margin-top: 30px;
+  line-height: 1px;
+}

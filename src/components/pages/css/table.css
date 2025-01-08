@@ -1,0 +1,144 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container.dark-mode {
+  background-color: #1a202c; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+.container.light-mode {
+  background-color: #fff; /* Light background */
+  color: #000; /* Dark text */
+}
+
+/* Heading */
+.container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Button */
+.toggle-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toggle-button.light-mode {
+  background-color: #007bff;
+  color: white;
+}
+
+.toggle-button.dark-mode {
+  background-color: #4a5568;
+  color: white;
+}
+
+.toggle-button:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Table */
+.table-container {
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #f1f1f1;
+}
+
+thead.dark-mode {
+  background-color: #2d3748;
+}
+
+thead th {
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+}
+
+tbody tr {
+  border-top: 1px solid #ddd;
+  transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+tbody tr.dark-mode:hover {
+  background-color: #4a5568;
+}
+
+td {
+  padding: 0.75rem 1rem;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-approved {
+  background-color: #38a169;
+  color: white;
+}
+
+.status-pending {
+  background-color: #ecc94b;
+  color: black;
+}
+
+.status-rejected {
+  background-color: #e53e3e;
+  color: white;
+}
+
+/* Image Styling */
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+td .flex {
+  display: flex;
+  align-items: center;
+}
+
+/* Dark Mode Table Rows */
+tbody tr.dark-mode {
+  border-top: 1px solid #4a5568;
+}

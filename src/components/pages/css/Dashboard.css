@@ -1,0 +1,88 @@
+/* General Dashboard Section */
+
+.dashboard-section {
+  display: grid;
+  margin-top: 0px;
+  position: relative;
+
+  padding-top: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  transition: background-color 0.3s ease, filter 0.3s ease; /* Smooth transition between modes */
+}
+
+/* Individual Dashboard Cards */
+.dashboard-card {
+  background: #3c4b5b;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0px 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.05);
+  background-color: #555a6b;
+}
+
+/* Card Icons */
+.dashboard-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #fff;
+}
+
+/* Card Information */
+.dashboard-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.dashboard-info p {
+  margin: 5px 0 0;
+  color: #cfcfcf;
+}
+
+/* Specific Styles for Each Card */
+.card-today {
+  margin-left: 25px;
+  background-color: #ff7f50;
+}
+
+.card-today .dashboard-icon {
+  color: #ffffff;
+}
+
+.card-user {
+  background-color: #4caf50; /* Green */
+}
+
+.card-user .dashboard-icon {
+  color: #ffffff;
+}
+
+.card-progress {
+  background-color: #f4b400; /* Yellow */
+}
+
+.card-progress .dashboard-icon {
+  color: #ffffff;
+}
+
+.card-tasks {
+  width: 266px;
+  /* margin-right: -4px; */
+  background-color: #2196f3;
+}
+
+.card-tasks .dashboard-icon {
+  color: #ffffff;
+}
+.table-container {
+  overflow-x: auto;
+}
