@@ -8,6 +8,7 @@ import ProductList from "./components/pages/ProductList";
 import ProfileSettings from "./components/pages/ProfileSettings.jsx"; // New page for Profile Settings
 import Sidebar from "./components/Sidebar";
 import { useState, useEffect } from "react";
+import { myFunction } from "./script.js";
 import "./App.css";
 
 const App = () => {
